@@ -67,7 +67,7 @@ class _NavBarState extends State<NavBar> {
         ? (isDark ? const Color(0xFF2E3B52) : const Color(0xFFE2E8F0))
         : Colors.transparent;
 
-    final isMobile = Responsive.isMobile(context);
+    final showDrawer = !Responsive.isDesktop(context);
 
     return ClipRRect(
       child: BackdropFilter(
@@ -109,7 +109,7 @@ class _NavBarState extends State<NavBar> {
               ),
               const Spacer(),
               // Navigation Items
-              if (!isMobile) ...[
+              if (!showDrawer) ...[
                 ...List.generate(widget.navItems.length, (index) {
                   return Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -130,8 +130,8 @@ class _NavBarState extends State<NavBar> {
                 ),
                 tooltip: 'Toggle Theme',
               ),
-              // Mobile Drawer Trigger Button
-              if (isMobile) ...[
+              // Drawer Trigger Button
+              if (showDrawer) ...[
                 const SizedBox(width: 8),
                 IconButton(
                   onPressed: () {

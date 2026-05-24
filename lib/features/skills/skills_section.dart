@@ -105,6 +105,7 @@ class _SkillCategoryCardState extends State<_SkillCategoryCard> {
     final isDark = theme.brightness == Brightness.dark;
     final title = widget.category['category'] as String;
     final skills = widget.category['skills'] as List<String>;
+    final isMobile = Responsive.isMobile(context);
 
     final cardBg = isDark
         ? const Color(0xFF161B2E).withValues(alpha: 0.5)
@@ -112,6 +113,14 @@ class _SkillCategoryCardState extends State<_SkillCategoryCard> {
     final cardBorder = isDark
         ? const Color(0xFF2E3B52).withValues(alpha: 0.6)
         : const Color(0xFFE2E8F0);
+
+    final wrapWidget = Wrap(
+      spacing: 10,
+      runSpacing: 10,
+      children: skills.map((skill) {
+        return _SkillChip(label: skill);
+      }).toList(),
+    );
 
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
@@ -149,17 +158,14 @@ class _SkillCategoryCardState extends State<_SkillCategoryCard> {
               style: AppTextStyles.cardTitle(isDark ? Colors.white : const Color(0xFF1E293B)),
             ),
             const SizedBox(height: 16),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Wrap(
-                  spacing: 10,
-                  runSpacing: 10,
-                  children: skills.map((skill) {
-                    return _SkillChip(label: skill);
-                  }).toList(),
+            if (isMobile)
+              wrapWidget
+            else
+              Expanded(
+                child: SingleChildScrollView(
+                  child: wrapWidget,
                 ),
               ),
-            ),
           ],
         ),
       ),

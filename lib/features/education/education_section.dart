@@ -87,6 +87,7 @@ class _EducationCardState extends State<_EducationCard> {
     final institution = widget.edu['institution'] as String;
     final period = widget.edu['period'] as String;
     final gpa = widget.edu['gpa'] as String?;
+    final isMobile = Responsive.isMobile(context);
 
     final textPrimaryColor = isDark ? Colors.white : const Color(0xFF1E293B);
     final textSecondaryColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
@@ -137,25 +138,42 @@ class _EducationCardState extends State<_EducationCard> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // Institution & Date
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: Text(
-                            institution,
-                            style: AppTextStyles.label(theme.colorScheme.primary),
+                    isMobile
+                        ? Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                institution,
+                                style: AppTextStyles.label(theme.colorScheme.primary),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                period,
+                                style: AppTextStyles.caption(textSecondaryColor).copyWith(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          )
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  institution,
+                                  style: AppTextStyles.label(theme.colorScheme.primary),
+                                ),
+                              ),
+                              const SizedBox(width: 16),
+                              Text(
+                                period,
+                                style: AppTextStyles.caption(textSecondaryColor).copyWith(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                        const SizedBox(width: 16),
-                        Text(
-                          period,
-                          style: AppTextStyles.caption(textSecondaryColor).copyWith(
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
                     const SizedBox(height: 12),
                     // Degree title
                     Text(

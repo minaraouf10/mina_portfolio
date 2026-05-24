@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
-    final isMobile = Responsive.isMobile(context);
+    final showDrawer = !Responsive.isDesktop(context);
 
     final drawerBg = isDark ? const Color(0xFF0D1117) : const Color(0xFFFAF9F6);
     final drawerTextDefault = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
@@ -70,8 +70,8 @@ class _HomePageState extends State<HomePage> {
           _scrollToSection(index);
         },
       ),
-      // Drawer configuration for mobile device sizes
-      drawer: isMobile
+      // Drawer configuration for mobile and tablet sizes
+      drawer: showDrawer
           ? Drawer(
               backgroundColor: drawerBg,
               child: SafeArea(
