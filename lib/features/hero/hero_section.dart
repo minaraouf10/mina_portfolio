@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../core/theme/app_text_styles.dart';
 import '../../core/utils/responsive_util.dart';
@@ -86,12 +87,12 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(
-                Icons.emoji_people,
-                size: 16,
-                color: theme.colorScheme.primary,
-              ),
-              const SizedBox(width: 8),
+              // Icon(
+              //   Icons.emoji_people,
+              //   size: 16,
+              //   color: theme.colorScheme.primary,
+              // ),
+              // const SizedBox(width: 8),
               Text(
                 'WELCOME TO MY PORTFOLIO',
                 style: AppTextStyles.label(theme.colorScheme.primary).copyWith(
@@ -187,19 +188,19 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
           mainAxisAlignment: isMobile ? MainAxisAlignment.center : MainAxisAlignment.start,
           children: [
             _SocialIcon(
-              icon: Icons.code,
+              icon: 'assets/icons/github_icon.svg',
               url: PortfolioData.githubUrl,
               tooltip: 'GitHub',
             ),
             const SizedBox(width: 16),
             _SocialIcon(
-              icon: Icons.business_center,
+              icon: 'assets/icons/linkedin_icon.svg',
               url: PortfolioData.linkedinUrl,
               tooltip: 'LinkedIn',
             ),
             const SizedBox(width: 16),
             _SocialIcon(
-              icon: Icons.email,
+              icon: 'assets/icons/gmail_icon.svg',
               url: 'mailto:${PortfolioData.email}',
               tooltip: 'Email',
             ),
@@ -305,7 +306,7 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
 }
 
 class _SocialIcon extends StatefulWidget {
-  final IconData icon;
+  final String icon;
   final String url;
   final String tooltip;
 
@@ -358,10 +359,14 @@ class _SocialIconState extends State<_SocialIcon> {
                 width: 1,
               ),
             ),
-            child: Icon(
+            child: SvgPicture.asset(
               widget.icon,
-              color: _isHovered ? activeColor : defaultColor,
-              size: 20,
+              width: 20,
+              height: 20,
+              colorFilter: ColorFilter.mode(
+                _isHovered ? activeColor : defaultColor,
+                BlendMode.srcIn,
+              ),
             ),
           ),
         ),
