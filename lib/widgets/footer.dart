@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../core/theme/app_text_styles.dart';
 import '../data/portfolio_data.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
-
-  Future<void> _launchUrl(String url) async {
-    final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri);
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,19 +30,21 @@ class Footer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              IconButton(
-                icon: const Icon(Icons.code),
-                onPressed: () => _launchUrl(PortfolioData.githubUrl),
+              _FooterSocialIcon(
+                icon: 'assets/icons/github_icon.svg',
+                url: PortfolioData.githubUrl,
                 tooltip: 'GitHub',
               ),
-              IconButton(
-                icon: const Icon(Icons.business_center),
-                onPressed: () => _launchUrl(PortfolioData.linkedinUrl),
+              const SizedBox(width: 16),
+              _FooterSocialIcon(
+                icon: 'assets/icons/linkedin_icon.svg',
+                url: PortfolioData.linkedinUrl,
                 tooltip: 'LinkedIn',
               ),
-              IconButton(
-                icon: const Icon(Icons.email),
-                onPressed: () => _launchUrl('mailto:${PortfolioData.email}'),
+              const SizedBox(width: 16),
+              _FooterSocialIcon(
+                icon: 'assets/icons/gmail_icon.svg',
+                url: 'mailto:${PortfolioData.email}',
                 tooltip: 'Email',
               ),
             ],
@@ -66,6 +62,72 @@ class Footer extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _FooterSocialIcon extends StatefulWidget {
+  final String icon;
+  final String url;
+  final String tooltip;
+
+  const _FooterSocialIcon({
+    required this.icon,
+    required this.url,
+    required this.tooltip,
+  });
+
+  @override
+  State<_FooterSocialIcon> createState() => _FooterSocialIconState();
+}
+
+class _FooterSocialIconState extends State<_FooterSocialIcon> {
+  bool _isHovered = false;
+
+  Future<void> _launchUrl() async {
+    final uri = Uri.parse(widget.url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDark = theme.brightness == Brightness.dark;
+
+    final defaultColor = isDark ? const Color(0xFF64748B) : const Color(0xFF94A3B8);
+    final activeColor = theme.colorScheme.primary;
+
+    return MouseRegion(
+      onEnter: (_) => setState(() => _isHovered = true),
+      onExit: (_) => setState(() => _isHovered = false),
+      cursor: SystemMouseCursors.click,
+      child: GestureDetector(
+        onTap: _launchUrl,
+        child: Tooltip(
+          message: widget.tooltip,
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: _isHovered
+                  ? theme.colorScheme.primary.withValues(alpha: 0.1)
+                  : Colors.transparent,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: SvgPicture.asset(
+              widget.icon,
+              width: 20,
+              height: 20,
+              colorFilter: ColorFilter.mode(
+                _isHovered ? activeColor : defaultColor,
+                BlendMode.srcIn,
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

@@ -119,85 +119,88 @@ class _EducationCardState extends State<_EducationCard> {
             ),
           ],
         ),
-        child: IntrinsicHeight(
-          child: Row(
-            children: [
-              // Decorative left accent bar
-              AnimatedContainer(
+        child: Stack(
+          children: [
+            // Decorative left accent bar
+            Positioned(
+              left: 0,
+              top: 0,
+              bottom: 0,
+              width: 5,
+              child: AnimatedContainer(
                 duration: const Duration(milliseconds: 250),
-                width: 5,
                 decoration: BoxDecoration(
                   color: _isHovered ? theme.colorScheme.primary : theme.colorScheme.primary.withValues(alpha: 0.4),
                   borderRadius: BorderRadius.circular(2.5),
                 ),
               ),
-              const SizedBox(width: 24),
-              // Content
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Institution & Date
-                    isMobile
-                        ? Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
+            ),
+            // Content
+            Padding(
+              padding: const EdgeInsets.only(left: 29), // 5 (bar width) + 24 (spacing)
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Institution & Date
+                  isMobile
+                      ? Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              institution,
+                              style: AppTextStyles.label(theme.colorScheme.primary),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              period,
+                              style: AppTextStyles.caption(textSecondaryColor).copyWith(
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        )
+                      : Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: Text(
                                 institution,
                                 style: AppTextStyles.label(theme.colorScheme.primary),
                               ),
-                              const SizedBox(height: 4),
-                              Text(
-                                period,
-                                style: AppTextStyles.caption(textSecondaryColor).copyWith(
-                                  fontWeight: FontWeight.w600,
-                                ),
+                            ),
+                            const SizedBox(width: 16),
+                            Text(
+                              period,
+                              style: AppTextStyles.caption(textSecondaryColor).copyWith(
+                                fontWeight: FontWeight.w600,
                               ),
-                            ],
-                          )
-                        : Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(
-                                child: Text(
-                                  institution,
-                                  style: AppTextStyles.label(theme.colorScheme.primary),
-                                ),
-                              ),
-                              const SizedBox(width: 16),
-                              Text(
-                                period,
-                                style: AppTextStyles.caption(textSecondaryColor).copyWith(
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
+                        ),
+                  const SizedBox(height: 12),
+                  // Degree title
+                  Text(
+                    degree,
+                    style: AppTextStyles.cardTitle(textPrimaryColor),
+                  ),
+                  if (gpa != null) ...[
                     const SizedBox(height: 12),
-                    // Degree title
-                    Text(
-                      degree,
-                      style: AppTextStyles.cardTitle(textPrimaryColor),
+                    Row(
+                      children: [
+                        Icon(Icons.grade, size: 16, color: theme.colorScheme.primary),
+                        const SizedBox(width: 8),
+                        Text(
+                          'GPA: $gpa',
+                          style: AppTextStyles.body(textSecondaryColor).copyWith(fontSize: 14),
+                        ),
+                      ],
                     ),
-                    if (gpa != null) ...[
-                      const SizedBox(height: 12),
-                      Row(
-                        children: [
-                          Icon(Icons.grade, size: 16, color: theme.colorScheme.primary),
-                          const SizedBox(width: 8),
-                          Text(
-                            'GPA: $gpa',
-                            style: AppTextStyles.body(textSecondaryColor).copyWith(fontSize: 14),
-                          ),
-                        ],
-                      ),
-                    ],
                   ],
-                ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

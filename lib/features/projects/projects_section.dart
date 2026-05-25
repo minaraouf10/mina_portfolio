@@ -67,7 +67,7 @@ class _ProjectsSectionState extends State<ProjectsSection> {
                       crossAxisCount: crossAxisCount,
                       crossAxisSpacing: 24,
                       mainAxisSpacing: 24,
-                      mainAxisExtent: 480,
+                      mainAxisExtent: 420,
                     ),
                     itemCount: PortfolioData.projects.length,
                     itemBuilder: (context, index) {
@@ -399,28 +399,28 @@ class _ProjectCardState extends State<_ProjectCard> {
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      const SizedBox(height: 12),
+                      // const SizedBox(height: 12),
                       // Action Link Button
-                      Row(
-                        children: [
-                          TextButton(
-                            onPressed: () => _launchUrl(url),
-                            style: TextButton.styleFrom(
-                              foregroundColor: theme.colorScheme.primary,
-                              padding: EdgeInsets.zero,
-                              minimumSize: const Size(50, 30),
-                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            ),
-                            child: Row(
-                              children: [
-                                Text('View Project', style: AppTextStyles.label(theme.colorScheme.primary).copyWith(fontSize: 13)),
-                                const SizedBox(width: 4),
-                                const Icon(Icons.arrow_outward, size: 14),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
+                      // Row(
+                      //   children: [
+                      //     TextButton(
+                      //       onPressed: () => _launchUrl(url),
+                      //       style: TextButton.styleFrom(
+                      //         foregroundColor: theme.colorScheme.primary,
+                      //         padding: EdgeInsets.zero,
+                      //         minimumSize: const Size(50, 30),
+                      //         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      //       ),
+                      //       child: Row(
+                      //         children: [
+                      //           Text('View Project', style: AppTextStyles.label(theme.colorScheme.primary).copyWith(fontSize: 13)),
+                      //           const SizedBox(width: 4),
+                      //           const Icon(Icons.arrow_outward, size: 14),
+                      //         ],
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
                     ],
                   ),
                 ),

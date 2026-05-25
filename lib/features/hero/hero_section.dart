@@ -176,7 +176,7 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
                 children: [
                   const Icon(Icons.code, size: 16),
                   const SizedBox(width: 8),
-                  Text('View GitHub', style: AppTextStyles.label(primaryTextColor)),
+                  Text('View CV', style: AppTextStyles.label(primaryTextColor)),
                 ],
               ),
             ),
