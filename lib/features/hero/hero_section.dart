@@ -1,5 +1,9 @@
+import 'dart:io' show File;
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:path_provider/path_provider.dart' show getTemporaryDirectory;
 import 'package:url_launcher/url_launcher.dart';
 import '../../core/theme/app_text_styles.dart';
 import '../../core/utils/responsive_util.dart';
@@ -52,9 +56,26 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
     super.dispose();
   }
 
-  Future<void> _launchUrl(String url) async {
-    final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
+
+
+  Future<void> _viewCV() async {
+    try {
+      if (kIsWeb) {
+        // On web, assets are served at assets/assets/cv/mina_cv.pdf
+        final uri = Uri.parse('assets/assets/cv/mina_cv.pdf');
+        await launchUrl(uri);
+      } else {
+        // On native platforms (Windows/Android/iOS), we copy the asset to a temp file and open it.
+        final bytes = await rootBundle.load(PortfolioData.cvAsset);
+        final dir = await getTemporaryDirectory();
+        final file = File('${dir.path}/mina_cv.pdf');
+        await file.writeAsBytes(bytes.buffer.asUint8List(), flush: true);
+        await launchUrl(Uri.file(file.path));
+      }
+    } catch (e) {
+      debugPrint('Error opening CV: $e');
+      // Fallback: try launching the Raw githubUrl
+      final uri = Uri.parse(PortfolioData.githubUrl);
       await launchUrl(uri);
     }
   }
@@ -162,7 +183,7 @@ class _HeroSectionState extends State<HeroSection> with SingleTickerProviderStat
               ),
             ),
             OutlinedButton(
-              onPressed: () => _launchUrl(PortfolioData.githubUrl),
+              onPressed: _viewCV,
               style: OutlinedButton.styleFrom(
                 foregroundColor: primaryTextColor,
                 side: BorderSide(color: isDark ? const Color(0xFF2E3B52) : const Color(0xFFCBD5E1), width: 1.5),

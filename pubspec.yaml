@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   provider: ^6.1.2
   visibility_detector: ^0.4.0+2
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:
@@ -60,5 +61,8 @@ flutter:
     - assets/images/hr/
     - assets/images/digx/
     - assets/images/bab_elezz/
+    - assets/images/shibrawi/
+    - assets/images/yal_spa/
+    - assets/cv/
     - assets/icons/
 

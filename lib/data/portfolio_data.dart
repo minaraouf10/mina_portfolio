@@ -10,7 +10,7 @@ class PortfolioData {
   static const String githubUrl = 'https://github.com/minaraouf10';
   static const String linkedinUrl = 'https://www.linkedin.com/in/mina-raouf-911a39221';
   static const String email = 'mina1335446@gmail.com';
-  static const String cvAsset = 'assets/files/cv.pdf'; // optional downloadable CV
+  static const String cvAsset = 'assets/cv/mina_cv.pdf'; // optional downloadable CV
 
   // ── Skills ────────────────────────────────────────────
   static const List<Map<String, dynamic>> skillCategories = [
@@ -69,6 +69,26 @@ class PortfolioData {
         'assets/images/bab_elezz/bab_el_ezz_2.jpg',
         'assets/images/bab_elezz/bab_el_ezz_3.jpg',
         'assets/images/bab_elezz/bab_el_ezz_4.jpg',
+      ],
+    },
+    {
+      'title': 'Shibrawi',
+      'description': 'A comprehensive food ordering application featuring interactive menus, cart management, Google Maps location tracking, and multi-language support.',
+      'tech': ['Flutter', 'Riverpod', 'Dio', 'Google Maps', 'Slang'],
+      'url': 'https://github.com/minaraouf10',
+      'imageAssets': [
+        'assets/images/shibrawi/shibrawi_1.png',
+        'assets/images/shibrawi/shibrawi_2.png',
+      ],
+    },
+    {
+      'title': 'Yal Spa',
+      'description': 'A premium e-commerce and wellness booking application with secure authentication, location-based services, dynamic offers, and AutoRoute navigation.',
+      'tech': ['Flutter', 'Riverpod', 'Dio', 'AutoRoute', 'Slang'],
+      'url': 'https://github.com/minaraouf10',
+      'imageAssets': [
+        'assets/images/yal_spa/yal_spa_1.png',
+        'assets/images/yal_spa/yal_spa_2.png',
       ],
     },
   ];
