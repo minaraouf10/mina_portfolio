@@ -2,7 +2,7 @@ class PortfolioData {
   // ── Hero ──────────────────────────────────────────────
   static const String name = 'Mina Raouf';
   static const String title = 'Flutter Developer & Mobile Solution Architect';
-  static const String bio = 'Passionate software engineer with 5+ years of experience building high-performance, beautiful mobile and web applications using Flutter & Dart. Specialized in clean architecture, reactive state management, and seamless integrations.';
+  static const String bio = 'Passionate software engineer with 2+ years of experience building high-performance, beautiful mobile and web applications using Flutter & Dart. Specialized in clean architecture, reactive state management, and seamless integrations.';
   
   // Custom mock assets for demonstration
   static const String avatarAsset = 'assets/images/profile_image.jpg';
@@ -10,7 +10,7 @@ class PortfolioData {
   static const String githubUrl = 'https://github.com/minaraouf10';
   static const String linkedinUrl = 'https://www.linkedin.com/in/mina-raouf-911a39221';
   static const String email = 'mina1335446@gmail.com';
-  static const String cvAsset = 'assets/cv/mina_cv.pdf'; // optional downloadable CV
+  static const String cvAsset = 'assets/cv/mina_cv.pdf'; 
 
   // ── Skills ────────────────────────────────────────────
   static const List<Map<String, dynamic>> skillCategories = [
