@@ -77,8 +77,11 @@ class PortfolioData {
       'tech': ['Flutter', 'Riverpod', 'Dio', 'Google Maps', 'Slang'],
       'url': 'https://github.com/minaraouf10',
       'imageAssets': [
-        'assets/images/shibrawi/shibrawi_1.png',
-        'assets/images/shibrawi/shibrawi_2.png',
+        'assets/images/shibrawi/shibrawi_1.jpeg',
+        'assets/images/shibrawi/shibrawi_2.jpeg',
+        'assets/images/shibrawi/shibrawi_3.jpeg',
+        'assets/images/shibrawi/shibrawi_4.jpeg',
+        'assets/images/shibrawi/shibrawi_5.jpeg',
       ],
     },
     {
