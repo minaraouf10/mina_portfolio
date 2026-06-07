@@ -9,7 +9,7 @@ class PortfolioData {
 
   static const String githubUrl = 'https://github.com/minaraouf10';
   static const String linkedinUrl = 'https://www.linkedin.com/in/mina-raouf-911a39221';
-  static const String email = 'mina1335446@gmail.com';
+  static const String email = 'minaraouf185@gmail.com';
   static const String cvAsset = 'assets/cv/mina_cv.pdf'; 
 
   // ── Skills ────────────────────────────────────────────
