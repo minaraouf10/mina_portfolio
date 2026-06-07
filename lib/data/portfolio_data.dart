@@ -84,16 +84,16 @@ class PortfolioData {
         'assets/images/shibrawi/shibrawi_5.jpeg',
       ],
     },
-    {
-      'title': 'Yal Spa',
-      'description': 'A premium e-commerce and wellness booking application with secure authentication, location-based services, dynamic offers, and AutoRoute navigation.',
-      'tech': ['Flutter', 'Riverpod', 'Dio', 'AutoRoute', 'Slang'],
-      'url': 'https://github.com/minaraouf10',
-      'imageAssets': [
-        'assets/images/yal_spa/yal_spa_1.png',
-        'assets/images/yal_spa/yal_spa_2.png',
-      ],
-    },
+    // {
+    //   'title': 'Yal Spa',
+    //   'description': 'A premium e-commerce and wellness booking application with secure authentication, location-based services, dynamic offers, and AutoRoute navigation.',
+    //   'tech': ['Flutter', 'Riverpod', 'Dio', 'AutoRoute', 'Slang'],
+    //   'url': 'https://github.com/minaraouf10',
+    //   'imageAssets': [
+    //     'assets/images/yal_spa/yal_spa_1.png',
+    //     'assets/images/yal_spa/yal_spa_2.png',
+    //   ],
+    // },
   ];
 
   // ── Experience ────────────────────────────────────────
