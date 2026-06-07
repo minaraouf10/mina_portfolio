@@ -85534,7 +85534,7 @@ ad(){return new A.EI()}}
 A.EI.prototype={
 tt(){var s=0,r=A.N(t.H),q
 var $async$tt=A.O(function(a,b){if(a===1)return A.K(b,r)
-for(;;)switch(s){case 0:q=A.h4("mailto:mina1335446@gmail.com?subject=Collaboration%20Inquiry",0,null)
+for(;;)switch(s){case 0:q=A.h4("mailto:minaraouf185@gmail.com?subject=Collaboration%20Inquiry",0,null)
 s=4
 return A.Q(A.a_x(q),$async$tt)
 case 4:s=b?2:3
@@ -85568,7 +85568,7 @@ g=A.dt().$3$color$fontSize$fontWeight(a3,14,B.aD).amb("monospace",14)
 f=c.e
 e=f?B.IS:B.IX
 d=t.p
-l=A.ed(A.fo(b,A.ct(b,A.dD(A.b([h,B.lw,new A.vd("mina1335446@gmail.com",b,g,b,l,b),B.lw,A.mS(e,f?B.OO:a4,b,16)],d),B.K,B.A,B.bv),B.t,b,b,new A.bH(k,b,i,j,b,b,B.S),b,b,b,B.Ib,b,b,b),B.a2,!1,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,l,b,b,b,b,b,b,!1,B.aG),B.bR,b,b,b,b)
+l=A.ed(A.fo(b,A.ct(b,A.dD(A.b([h,B.lw,new A.vd("minaraouf185@gmail.com",b,g,b,l,b),B.lw,A.mS(e,f?B.OO:a4,b,16)],d),B.K,B.A,B.bv),B.t,b,b,new A.bH(k,b,i,j,b,b,B.S),b,b,b,B.Ib,b,b,b),B.a2,!1,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,l,b,b,b,b,b,b,!1,B.aG),B.bR,b,b,b,b)
 k=a0?B.l:B.j
 k=A.aAm(b,b,a,b,b,b,0,b,b,k,b,b,B.Ij,b,new A.c8(A.cl(12),B.o),b,b,b,b,b)
 return new A.nY(new A.alb(c),A.t6(A.J5(A.ct(b,new A.li(A.dw(A.b([B.S0,B.fl,A.hi(A.ct(b,A.dw(A.b([o,B.lx,n,B.dU,m,B.Aa,l,B.TM,A.aAl(A.dD(A.b([B.Jd,B.TJ,A.bS("Send Email Message",b,b,A.dt().$3$color$fontSize$fontWeight(a0?B.l:B.j,14,B.aD),b)],d),B.K,B.A,B.bv),c.gacZ(),k)],d),B.K,B.A,B.bv),B.t,b,b,new A.bH(a1,b,q,r,p,b,B.S),b,b,b,B.Ih,b,b,b),b,b)],d),B.a9,B.A,B.F),b),B.t,b,b,b,b,b,b,new A.ap(s,80,s,80),b,b,b),B.cG,B.aA,a5),B.aA,a6),B.a_X)}}
@@ -85739,7 +85739,7 @@ m=A.aAl(A.dD(A.b([A.bS("Let's Talk",h,h,A.dt().$3$color$fontSize$fontWeight(e?B.
 l=e?B.bo:B.nm
 l=A.axm(B.AR,A.b([m,new A.Na(i.gajg(),h,h,h,A.aNk(h,h,h,h,h,h,h,h,h,a,h,h,B.o7,h,new A.c8(A.cl(12),B.o),new A.bu(l,1.5,B.C,-1),h,h,h,h),h,h,!1,h,!0,h,A.dD(A.b([B.Jj,B.dT,A.bS("View CV",h,h,A.dt().$3$color$fontSize$fontWeight(a,14,B.aD),h)],p),B.K,B.A,B.bv),h)],p),16,16)
 m=c?B.cr:B.A
-k=A.dw(A.b([r,B.lx,new A.vd(h,q,h,s,h,h),B.fk,o,B.lx,new A.f1(B.Cr,n,h),B.Aa,l,B.TN,A.dD(A.b([new A.rI("assets/icons/github_icon.svg","https://github.com/minaraouf10","GitHub",h),B.fj,new A.rI("assets/icons/linkedin_icon.svg",u.v,"LinkedIn",h),B.fj,new A.rI("assets/icons/gmail_icon.svg","mailto:mina1335446@gmail.com","Email",h)],p),B.K,m,B.F)],p),a1,B.cr,B.F)
+k=A.dw(A.b([r,B.lx,new A.vd(h,q,h,s,h,h),B.fk,o,B.lx,new A.f1(B.Cr,n,h),B.Aa,l,B.TN,A.dD(A.b([new A.rI("assets/icons/github_icon.svg","https://github.com/minaraouf10","GitHub",h),B.fj,new A.rI("assets/icons/linkedin_icon.svg",u.v,"LinkedIn",h),B.fj,new A.rI("assets/icons/gmail_icon.svg","mailto:minaraouf185@gmail.com","Email",h)],p),B.K,m,B.F)],p),a1,B.cr,B.F)
 a1=A.cl(30)
 f=A.b([new A.d0(5,B.bG,f.bp(0.15),B.e,40)],t.sq)
 m=A.cl(30)
@@ -86146,7 +86146,7 @@ M(a){var s=null,r=A.aC5(a,t.eC).a
 return new A.Av(B.IN,"Mina Raouf - Portfolio",A.r9(B.Bo,B.a8,B.j,new A.oT(s,B.j,s,s,0,s,new A.c8(A.cl(16),B.Ci)),B.DN,B.bg,B.jy,B.jm,!0),A.r9(B.Bp,B.E,B.c0,new A.oT(s,B.c0,s,s,0,s,new A.c8(A.cl(16),B.Cj)),B.DO,B.bo,B.jk,B.GQ,!0),r,!1,s)}}
 A.LA.prototype={
 M(a){var s=null,r=A.a0(a).ax.a===B.E,q=r?B.bp:B.bq,p=r?B.GK:B.nJ,o=r?B.aO:B.bg,n=t.p
-return A.ct(s,A.dw(A.b([A.dD(A.b([new A.rt("assets/icons/github_icon.svg","https://github.com/minaraouf10","GitHub",s),B.fj,new A.rt("assets/icons/linkedin_icon.svg",u.v,"LinkedIn",s),B.fj,new A.rt("assets/icons/gmail_icon.svg","mailto:mina1335446@gmail.com","Email",s)],n),B.K,B.cr,B.F),B.dU,A.bS("\xa9 "+A.aC2(new A.iB(Date.now(),0,!1))+" Mina Raouf. All Rights Reserved.",s,s,A.dt().$3$color$fontSize$fontWeight(q,13,B.m),B.bC),B.Ab,A.bS("Built with Flutter Web \xb7 Responsive \xb7 Modern Glassmorphism",s,s,A.dt().$3$color$fontSize$fontWeight(q.bp(0.7),13,B.m),B.bC)],n),B.K,B.A,B.F),B.t,s,s,new A.bH(p,s,new A.di(new A.bu(o,1,B.C,-1),B.o,B.o,B.o),s,s,s,B.S),s,s,s,B.Ic,s,s,s)}}
+return A.ct(s,A.dw(A.b([A.dD(A.b([new A.rt("assets/icons/github_icon.svg","https://github.com/minaraouf10","GitHub",s),B.fj,new A.rt("assets/icons/linkedin_icon.svg",u.v,"LinkedIn",s),B.fj,new A.rt("assets/icons/gmail_icon.svg","mailto:minaraouf185@gmail.com","Email",s)],n),B.K,B.cr,B.F),B.dU,A.bS("\xa9 "+A.aC2(new A.iB(Date.now(),0,!1))+" Mina Raouf. All Rights Reserved.",s,s,A.dt().$3$color$fontSize$fontWeight(q,13,B.m),B.bC),B.Ab,A.bS("Built with Flutter Web \xb7 Responsive \xb7 Modern Glassmorphism",s,s,A.dt().$3$color$fontSize$fontWeight(q.bp(0.7),13,B.m),B.bC)],n),B.K,B.A,B.F),B.t,s,s,new A.bH(p,s,new A.di(new A.bu(o,1,B.C,-1),B.o,B.o,B.o),s,s,s,B.S),s,s,s,B.Ic,s,s,s)}}
 A.rt.prototype={
 ad(){return new A.Fi()}}
 A.Fi.prototype={
@@ -93608,7 +93608,7 @@ B.t=new A.tq(0,"none")
 B.P=new A.tq(1,"hardEdge")
 B.bZ=new A.tq(2,"antiAlias")
 B.c_=new A.tq(3,"antiAliasWithSaveLayer")
-B.DI=new A.tu("mina1335446@gmail.com")
+B.DI=new A.tu("minaraouf185@gmail.com")
 B.n8=new A.tv(0,"pasteable")
 B.jj=new A.tv(1,"unknown")
 B.Qh=new A.uM(3,"close")
